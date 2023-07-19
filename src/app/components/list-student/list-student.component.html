@@ -1,0 +1,27 @@
+<h3>Student List</h3>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of students">
+        <th scope="row">{{item?.student_id}}</th>
+        <td>{{item?.name}}</td>
+        <td>{{item?.email}}</td>
+        <td>{{item?.address}}</td>
+        <td>
+            <button type="button" class="btn btn-danger">Delete</button>
+          &nbsp;  
+        <buttton type="button" class="btn btn-primary" routerLink="/edit/{{item.id}}">Edit</buttton></td>
+
+       
+      </tr>
+      
+    </tbody>
+  </table>
